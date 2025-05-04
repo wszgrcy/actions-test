@@ -3,7 +3,7 @@ name: test1
 on:
   repository_dispatch:
     types:
-      - update
+      - upload
 
 jobs:
   build:
