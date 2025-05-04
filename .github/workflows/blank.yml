@@ -1,0 +1,31 @@
+name: test1
+
+on:
+  repository_dispatch:
+    types:
+      - update
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: |
+          type node 
+          node --version
+      - uses: wszgrcy/upload-s3-action@1.0.5
+        name: 测试下载
+        with:
+          aws_key_id: ${{ secrets.AWS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
+          aws_bucket: 'shenghuabi-repo'
+          endpoint: ${{ secrets.AWS_ENDPOINT }}
+          source_dir: 'dist'
+          destination_dir: './output'
+          mode: download
+
+      - name: 发行
+        uses: softprops/action-gh-release@v2
+        with:
+          fail_on_unmatched_files: true
+          files: ./output/**/*
