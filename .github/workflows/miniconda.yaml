@@ -26,3 +26,9 @@ jobs:
           pip install WeTextProcessing --no-deps
           pip install -e .
           indextts --help
+      - name: Zip current directory
+        run: zip -r output.zip .
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: output.zip
