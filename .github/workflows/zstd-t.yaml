@@ -15,7 +15,7 @@ jobs:
           repository: 'index-tts/index-tts'
       - uses: wszgrcy/actions-pkg@1.0.22
         with:
-          dir: ./index-tts
+          dir: '.'
           outputPath: ./abcd.zstd
           cleanPaths: |
             **/*.py
