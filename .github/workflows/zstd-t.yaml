@@ -1,0 +1,12 @@
+name: name名字
+run-name: zstd-test
+on: [push]
+permissions:
+  contents: write
+env:
+  RUNNER_DEBUG: '1'
+jobs:
+  update-release:
+    runs-on: windows-latest
+    steps:
+      - uses: wszgrcy/actions-pkg@v3
