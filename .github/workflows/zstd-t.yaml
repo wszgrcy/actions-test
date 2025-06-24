@@ -9,4 +9,4 @@ jobs:
   update-release:
     runs-on: windows-latest
     steps:
-      - uses: wszgrcy/actions-pkg@1.0.1
+      - uses: wszgrcy/actions-pkg@1.0.2
