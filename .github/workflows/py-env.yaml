@@ -32,7 +32,13 @@ jobs:
             ./.venv/**/*.{h,cpp,c,hpp,cmake}
             ./.venv/conda-meta/**/*
             ./.venv/etc/conda/**/*
-          zstdLevel: '5'
+            ./.venv/Library/cmake
+            ./.venv/Library/include
+            ./.venv/Library/etc
+            ./.venv/fonts
+            ./.venv/include
+            ./.venv/etc
+          zstdLevel: '22'
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
