@@ -9,4 +9,14 @@ jobs:
   update-release:
     runs-on: windows-latest
     steps:
-      - uses: wszgrcy/actions-pkg@1.0.6
+      - name: pull-code
+        uses: actions/checkout@v4
+        with:
+          repository: 'index-tts/index-tts'
+      - uses: wszgrcy/actions-pkg@1.0.7
+        with:
+          dir: ../
+          cleanPaths: |
+            a
+            b
+            c
