@@ -16,10 +16,15 @@ jobs:
       - uses: wszgrcy/actions-pkg@1.0.21
         with:
           dir: ../
-          outputPath: ./abcd
+          outputPath: ./abcd.zstd
           cleanPaths: |
             **/*.py
             b
             c
       - run: |
           ls
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: abcd.zstd
+          tag_name: 1.0.1
