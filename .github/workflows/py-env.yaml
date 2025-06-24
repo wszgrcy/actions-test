@@ -24,7 +24,7 @@ jobs:
           pip install WeTextProcessing --no-deps
           pip install .
           pip install bottle
-      - uses: wszgrcy/actions-pkg@1.0.25
+      - uses: wszgrcy/actions-pkg@1.0.27
         with:
           dir: '../tts-env'
           outputPath: ./py-env.tar.zstd
@@ -32,6 +32,7 @@ jobs:
             ./.venv/**/*.{h,cpp,c,hpp,cmake}
             ./.venv/conda-meta/**/*
             ./.venv/etc/conda/**/*
+          zstdLevel: '5'
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
