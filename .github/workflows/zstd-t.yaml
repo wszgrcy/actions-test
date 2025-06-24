@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: 'index-tts/index-tts'
-      - uses: wszgrcy/actions-pkg@1.0.13
+      - uses: wszgrcy/actions-pkg@1.0.14
         with:
           dir: ../
           outputPaht: ./abc
