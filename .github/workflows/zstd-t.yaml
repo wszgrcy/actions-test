@@ -13,10 +13,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: 'index-tts/index-tts'
-      - uses: wszgrcy/actions-pkg@1.0.22
+      - uses: wszgrcy/actions-pkg@1.0.23
         with:
           dir: '.'
-          outputPath: ./abcd.zstd
+          outputPath: ./abcd.tar.zstd
           cleanPaths: |
             **/*.py
             b
