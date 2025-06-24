@@ -24,7 +24,7 @@ jobs:
           pip install WeTextProcessing --no-deps
           pip install .
           pip install bottle
-      - uses: wszgrcy/actions-pkg@1.0.24
+      - uses: wszgrcy/actions-pkg@1.0.25
         with:
           dir: '../tts-env'
           outputPath: ./py-env.tar.zstd
