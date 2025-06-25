@@ -16,6 +16,7 @@ jobs:
       - run: |
           which zstd
           type zstd
+          type sudo
       - uses: wszgrcy/actions-pkg@1.1.2
         with:
           dir: '.'
