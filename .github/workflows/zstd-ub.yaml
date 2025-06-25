@@ -13,9 +13,9 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: 'index-tts/index-tts'
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
+      - run: |
+          which zstd
+          type zstd
       - uses: wszgrcy/actions-pkg@1.1.2
         with:
           dir: '.'
