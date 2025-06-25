@@ -17,7 +17,7 @@ jobs:
           which zstd
           type zstd
           type sudo
-      - uses: wszgrcy/actions-pkg@1.1.2
+      - uses: wszgrcy/actions-pkg@1.1.3
         with:
           dir: '.'
           outputPath: ./abcd.tar.zstd
