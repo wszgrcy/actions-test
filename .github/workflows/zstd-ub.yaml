@@ -1,5 +1,5 @@
-name: zstd-w-test
-run-name: zstd-w-test
+name: zstd-ub-test
+run-name: zstd-ub-test
 on: [push]
 permissions:
   contents: write
@@ -7,7 +7,7 @@ env:
   RUNNER_DEBUG: '1'
 jobs:
   update-release:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: pull-code
         uses: actions/checkout@v4
@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - uses: wszgrcy/actions-pkg@1.1.1
+      - uses: wszgrcy/actions-pkg@1.1.2
         with:
           dir: '.'
           outputPath: ./abcd.tar.zstd
