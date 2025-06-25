@@ -1,4 +1,4 @@
-name: name名字
+name: zstd-test
 run-name: zstd-test
 on: [push]
 permissions:
