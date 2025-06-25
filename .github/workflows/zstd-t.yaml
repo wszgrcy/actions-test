@@ -19,8 +19,7 @@ jobs:
           outputPath: ./abcd.tar.zstd
           cleanPaths: |
             **/*.py
-            b
-            c
+
       # - run: |
       #     ls
       # - name: Release
